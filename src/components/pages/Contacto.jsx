@@ -7,9 +7,7 @@ import {
 function Contacto() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Contacto Page</Heading>
-      </ContentContainer>
+      <Heading>Contacto Page</Heading>
     </>
   );
 }

@@ -7,9 +7,7 @@ import {
 function Profile() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Profile Page</Heading>
-      </ContentContainer>
+      <Heading>Profile Page</Heading>
     </>
   );
 }

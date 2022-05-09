@@ -8,9 +8,7 @@ import {
 const DemoPage = () => {
   return (
     <>
-      <ContentContainer>
-        <Heading>Demo Page</Heading>
-      </ContentContainer>
+      <Heading>Demo Page</Heading>
     </>
   );
 };

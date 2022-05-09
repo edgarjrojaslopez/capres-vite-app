@@ -7,9 +7,7 @@ import {
 function Login() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Login Page</Heading>
-      </ContentContainer>
+      <Heading>Login Page</Heading>
     </>
   );
 }

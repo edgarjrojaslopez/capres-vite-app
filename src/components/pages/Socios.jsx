@@ -7,9 +7,7 @@ import {
 function Socios() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Socios Page</Heading>
-      </ContentContainer>
+      <Heading>Socios Page</Heading>
     </>
   );
 }

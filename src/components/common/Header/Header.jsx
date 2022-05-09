@@ -1,51 +1,58 @@
 import React from "react";
+import tw from "twin.macro";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import CapresLogo from "../../assets/images/capres.jpg";
 import NavLinks from "./NavLinks";
 import { FaBars } from "react-icons/fa";
-
-function Header() {
+import {
+  HamburgerIcon,
+  LogoContainer,
+  Menu,
+  MenuLink,
+  NavContainer,
+} from "../../assets/styles/HeaderStyles";
+import logo from "../../assets/images/capres.jpg";
+const Header = () => {
   const location = useLocation();
+  const LinkItems = [
+    { name: "Inicio", link: "/" },
+    { name: "Nosotros", link: "/nosotros" },
+    { name: "Socios", link: "/socios" },
+    { name: "Servicios", link: "/servicios" },
+    { name: "Contacto", link: "/contacto" },
+  ];
+  const linkItems = LinkItems.map((LinkItem) => (
+    <MenuLink key={LinkItem.name} to={LinkItem.link}>
+      {LinkItem.name}
+    </MenuLink>
+  ));
   return (
-    <div
-      id="NavbarContainer"
-      className={
-        " flex h-auto w-full items-center justify-between px-6 shadow-md" +
-        (location.pathname === "/"
-          ? " bg-transparent"
-          : " bg-azul-capres-800 shadow-azul-capres-800")
-      }
-    >
-      <div id="LeftSection" className="flex">
-        <div className="h-20 w-full">
-          <Link to="/">
-            <img
-              className="h-full w-full py-2"
-              src={CapresLogo}
-              alt="capres logo"
+    <>
+      <NavContainer>
+        <LogoContainer to="/">
+          <img css={tw`h-16 w-auto`} src={logo} alt="Logo CAPRES" />
+        </LogoContainer>
+        <HamburgerIcon>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h8m-8 6h16"
             />
-          </Link>
-        </div>
-        <div className=""></div>
-      </div>
-      <div id="MiddleSection" className="flex">
-        <NavLinks />
-      </div>
-      <div id="RightSection" className="">
-        <button
-          className={
-            "text-3xl" +
-            (location.pathname === "/"
-              ? " text-gris-capres-700"
-              : " text-gris-capres-200")
-          }
-        >
-          <FaBars />
-        </button>
-      </div>
-      <Outlet />
-    </div>
+          </svg>
+        </HamburgerIcon>
+
+        <Menu>{linkItems}</Menu>
+      </NavContainer>
+    </>
   );
-}
+};
 
 export default Header;

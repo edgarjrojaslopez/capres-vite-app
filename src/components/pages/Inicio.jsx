@@ -7,9 +7,7 @@ import {
 function Inicio() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Inicio Page</Heading>
-      </ContentContainer>
+      <Heading>Inicio Page</Heading>
     </>
   );
 }

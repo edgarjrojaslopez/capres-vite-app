@@ -7,9 +7,7 @@ import {
 function Servicios() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Servicios Page</Heading>
-      </ContentContainer>
+      <Heading>Servicios Page</Heading>
     </>
   );
 }

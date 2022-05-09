@@ -7,9 +7,7 @@ import {
 function Descargas() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Descargas Page</Heading>
-      </ContentContainer>
+      <Heading>Descargas Page</Heading>
     </>
   );
 }

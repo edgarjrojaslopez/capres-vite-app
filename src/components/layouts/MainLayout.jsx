@@ -1,19 +1,19 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Container } from "../assets/styles/PagesStyles";
+import { Container, ContentContainer } from "../assets/styles/PagesStyles";
 import Footer from "../common/Footer/Footer";
 import Header from "../common/Header/Header";
 
 const MainLayout = () => {
   return (
     <>
-      <div>
-        {/* <Header /> */}
-        <Container>
+      <Header />
+      <Container>
+        <ContentContainer>
           <Outlet />
-        </Container>
-        {/* <Footer /> */}
-      </div>
+        </ContentContainer>
+      </Container>
+      {/* <Footer /> */}
     </>
   );
 };

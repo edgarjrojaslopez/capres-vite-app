@@ -7,9 +7,7 @@ import {
 function Delegados() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Delegados Page</Heading>
-      </ContentContainer>
+      <Heading>Delegados Page</Heading>
     </>
   );
 }

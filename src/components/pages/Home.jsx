@@ -7,9 +7,7 @@ import {
 function Home() {
   return (
     <>
-      <ContentContainer>
-        <Heading>Home Page</Heading>
-      </ContentContainer>
+      <Heading>Home Page</Heading>
     </>
   );
 }
