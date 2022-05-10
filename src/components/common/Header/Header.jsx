@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import CapresLogo from "../../assets/images/capres.jpg";
 import NavLinks from "./NavLinks";
 import { FaBars } from "react-icons/fa";
 import {
+  ButtonMenuContainer,
+  ButtonSignUp,
   HamburgerIcon,
   LogoContainer,
   Menu,
@@ -13,6 +15,7 @@ import {
 } from "../../assets/styles/HeaderStyles";
 import logo from "../../assets/images/capres.jpg";
 const Header = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
   const location = useLocation();
   const LinkItems = [
     { name: "Inicio", link: "/" },
@@ -32,6 +35,10 @@ const Header = () => {
         <LogoContainer to="/">
           <img css={tw`h-16 w-auto`} src={logo} alt="Logo CAPRES" />
         </LogoContainer>
+        <Menu>{linkItems}</Menu>
+        <ButtonMenuContainer>
+          <ButtonSignUp>Button</ButtonSignUp>
+        </ButtonMenuContainer>
         <HamburgerIcon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +55,6 @@ const Header = () => {
             />
           </svg>
         </HamburgerIcon>
-
-        <Menu>{linkItems}</Menu>
       </NavContainer>
     </>
   );

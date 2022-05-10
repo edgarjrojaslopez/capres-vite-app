@@ -13,7 +13,7 @@ export const ContentContainer = tw.div`
 flex
 w-full
 h-full
-bg-blue-800
+bg-gray-200
 items-center
 justify-center
 p-10
